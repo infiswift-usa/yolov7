@@ -27,7 +27,7 @@ names = None
 stride = None
 
 # Configuration parameters (adjust as needed)
-weights = "yolov7_custom/runs/train/yolov7-custom26/weights/best.pt"
+weights = "runs/train/yolov7-custom26/weights/best.pt"
 conf_thres = 0.25
 iou_thres = 0.45
 trace_model = True
@@ -124,5 +124,3 @@ async def detect(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8502)

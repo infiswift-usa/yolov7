@@ -24,7 +24,7 @@
 !cfg/yolov3*.cfg
 
 storage.googleapis.com
-runs/*
+# runs/*
 data/*
 data/images/*
 !data/*.yaml
@@ -261,3 +261,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Add custom trained model weights
+!runs/train/yolov7-custom26/weights/best.pt
